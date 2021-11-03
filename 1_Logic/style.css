@@ -9,6 +9,40 @@
     background-repeat: repeat;
   }
   
+  div.section {
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+    margin: 30px auto;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  div.section h3 {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  div.section div.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  div.section div.result div.col-result {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 30%;
+  }
+  
+  div.section div.result div.col-result label {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
   /* Navbar Section */
   nav {
     display: flex;
@@ -24,16 +58,6 @@
   }
   
   /* Form Section */
-  div.form-container {
-    width: 50%;
-    background-color: white;
-    padding: 10px;
-    margin: 30px auto;
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 10px;
-    position: relative;
-  }
-  
   form {
     display: flex;
     flex-direction: column;
@@ -41,19 +65,24 @@
     justify-content: space-between;
   }
   
-  form button.btn-submit {
-    margin: 10px auto;
-  }
-  
-  form div.row {
+  form div.form-body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin: 10px 0;
+  }
+  
+  form div.form-footer {
+    margin: 0 auto;
   }
   
   form div.col-index {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 55%;
     padding: 5px 10px;
   }
   
@@ -63,11 +92,8 @@
   }
   
   /* Input Section */
-  input.input-index,
-  input.input-target {
+  input {
     display: inline;
-    width: 35%;
-    margin: 10px 10px 5px 0px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -79,62 +105,72 @@
     border-radius: 0.25rem;
   }
   
+  input.input-index {
+    width: 35%;
+    margin: 10px 10px 5px 0px;
+  }
+  
   input.input-target {
-    display: inline;
     width: 70%;
     margin: 10px 10px 5px 0px;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: white;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+  }
+  
+  input.array-value {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
+  }
+  
+  input.target-value {
+    font-size: 2rem;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+    margin: 0 auto;
+  }
+  
+  input.result-value {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
   }
   
   /* Button Section */
+  button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
   .btn-add {
-      display: inline-block;
-      color: white;
-      background-color: rgb(23, 160, 52);
-      border-color: rgb(23, 160, 52);
-      font-size: 0.75rem;
-      font-weight: 400;
-      line-height: 0.75;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor:pointer;
-      border: 1px solid transparent;
-      border-radius: 0.25rem;
-      padding: 0.375rem 0.75rem;
-      margin: 0 5px;
+    color: white;
+    background-color: rgb(23, 160, 52);
+    border-color: rgb(23, 160, 52);
   }
   
   .btn-add:hover {
-      background-color: rgb(0, 131, 28);
+    background-color: rgb(0, 131, 28);
   }
   
   .btn-submit {
-      display: inline-block;
-      color: white;
-      background-color: rgb(2, 134, 179);
-      border-color: rgb(2, 134, 179);
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor:pointer;
-      border: 1px solid transparent;
-      border-radius: 0.25rem;
-      padding: 0.375rem 0.75rem;
+    color: white;
+    background-color: rgb(2, 134, 179);
+    border-color: rgb(2, 134, 179);
   }
   
   .btn-submit:hover {
-      background-color: rgb(27, 104, 129);
+    background-color: rgb(27, 104, 129);
   }
   
