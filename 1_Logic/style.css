@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-image: url(./img/bg-ypattern.png);
+    background-repeat: repeat;
+  }
+  
+  /* Navbar Section */
+  nav {
+    display: flex;
+    background-color: rgb(27, 104, 129);
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  nav .nav-logo {
+    color: white;
+    font-family: "Pacifico", cursive;
+    letter-spacing: 1px;
+  }
+  
+  /* Form Section */
+  div.form-container {
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+    margin: 30px auto;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  form button.btn-submit {
+    margin: 10px auto;
+  }
+  
+  form div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  form div.col-index {
+    width: 60%;
+    padding: 5px 10px;
+  }
+  
+  form div.col-target {
+    width: 35%;
+    padding: 5px 10px;
+  }
+  
+  /* Input Section */
+  input.input-index,
+  input.input-target {
+    display: inline;
+    width: 35%;
+    margin: 10px 10px 5px 0px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  
+  input.input-target {
+    display: inline;
+    width: 70%;
+    margin: 10px 10px 5px 0px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  
+  /* Button Section */
+  .btn-add {
+      display: inline-block;
+      color: white;
+      background-color: rgb(23, 160, 52);
+      border-color: rgb(23, 160, 52);
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 0.75;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor:pointer;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      padding: 0.375rem 0.75rem;
+      margin: 0 5px;
+  }
+  
+  .btn-add:hover {
+      background-color: rgb(0, 131, 28);
+  }
+  
+  .btn-submit {
+      display: inline-block;
+      color: white;
+      background-color: rgb(2, 134, 179);
+      border-color: rgb(2, 134, 179);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor:pointer;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      padding: 0.375rem 0.75rem;
+  }
+  
+  .btn-submit:hover {
+      background-color: rgb(27, 104, 129);
+  }
+  
