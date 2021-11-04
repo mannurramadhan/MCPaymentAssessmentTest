@@ -22,7 +22,7 @@
     <div class="section">
         <h3>INPUT SECTION</h3>
         <hr>
-        <form action="#">
+        <form>
             <div class="form-body">
                 <div class="col-index">
                     <label for="#indexNumber">Insert Number for Array Index:</label>
@@ -49,11 +49,11 @@
         <hr>
         <div class="result">
             <div class="col-result">
-                <label for="">Array Index:</label>
+                <label>Array Index:</label>
                 <input type="text" class="array-value" id="arrayValue" readonly />
             </div>
             <div class="col-result">
-                <label for="">Target Value:</label>
+                <label>Target Value:</label>
                 <input type="text" class="target-value" id="targetValue" readonly />
             </div>
             <div class="col-result">
