@@ -171,6 +171,16 @@ button {
   background-color: rgb(27, 104, 129);
 }
 
+.btn-reduce {
+  color: white;
+  background-color: rgb(180, 35, 35);
+  border-color: rgb(180, 35, 35);
+}
+
+.btn-reduce:hover {
+  background-color: rgb(134, 14, 14);
+}
+
 /* Responsive Breakpoint */
 @media screen and (max-width: 1190px) {
   /* Input Section */
@@ -222,6 +232,7 @@ button {
 @media screen and (max-width: 620px) {
   div.section div.result {
     flex-direction: column;
+    transition: all 0.75s;
   }
 
   div.section div.result div.col-result {
@@ -240,6 +251,7 @@ button {
     display: inherit;
     flex-direction: column;
     justify-content: space-around;
+    transition: all 1s;
   }
 
   form div.form-body div.col-index,
@@ -262,10 +274,17 @@ button {
     height: 30px;
     width: 250px;
     margin: 5px auto;
+    transition: all 0.75s;
   }
 
   input.target-value {
     font-size: 1.5rem;
+  }
+
+  .btn-add, .btn-reduce, .btn-submit {
+    font-size: 0.75rem;
+    line-height: 1;
+    transition: all 1s;
   }
 }
 

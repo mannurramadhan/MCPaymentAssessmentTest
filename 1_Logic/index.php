@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div class="nav-logo">
-            <h4>Logic Program</h4>
+            <h3>Logic Program</h3>
         </div>
     </nav>
     <div class="section">
@@ -25,25 +25,21 @@
         <form action="" method="POST">
             <div class="form-body">
                 <div class="col-index">
-                    <label for="#index-number">Insert Number for Array Index:</label>
-                    <div id="index-number">
-                        <input type="number" class="input-index" placeholder="Value-1" name="index-1" />
-                        <input type="number" class="input-index" placeholder="Value-2" name="index-2" />
-                        <input type="number" class="input-index" placeholder="Value-3" name="index-3" />
-                        <input type="number" class="input-index" placeholder="Value-4" name="index-4" />
-                        <input type="number" class="input-index" placeholder="Value-5" name="index-5" />
-                        <input type="number" class="input-index" placeholder="Value-6" name="index-6" />
+                    <label for="#indexNumber">Insert Number for Array Index:</label>
+                    <div id="indexNumber">
+                        <input type="number" class="input-index" placeholder="Value-1" name="numsIndex1" />
                     </div>
                 </div>
                 <div class="col-target">
-                    <label for="#target-number">Insert Target Value:</label>
-                    <div id="target-number">
-                        <input type="number" class="input-target" placeholder="Target" name="target-value" />
+                    <label for="#targetNumber">Insert Target Value:</label>
+                    <div id="targetNumber">
+                        <input type="number" class="input-target" placeholder="Target" name="targetValue" />
                     </div>
                 </div>
             </div>
             <div class="form-footer">
-                <button class="btn-add" type="button">Add</button>
+                <button class="btn-add" type="button" onclick="numsIndex('add')">Add</button>
+                <button class="btn-reduce" type="button" onclick="numsIndex('reduce')">Reduce</button>
                 <button class="btn-submit" type="submit">Generate</button>
             </div>
         </form>
@@ -68,6 +64,7 @@
     </div>
     <br>
     <br>
+    <script src="script.js"></script>
 </body>
 
 </html>
