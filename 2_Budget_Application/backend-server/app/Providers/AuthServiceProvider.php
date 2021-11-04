@@ -38,7 +38,7 @@ class AuthServiceProvider extends ServiceProvider
             $token = $request->header('token');
             
             if ($token) {
-                return User::where('token', $token)->first();
+                return User::where('api_token', $token)->first();
             }
         });
     }

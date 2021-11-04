@@ -28,7 +28,7 @@ class RegisterController extends Controller
             'password' => $password
         ]);
 
-        return response()->json(['message' => 'User register successfully'], 201);
+        return response()->json(['message' => 'User registered successfully', 'data' => $user], 201);
 
     }
 

@@ -33,10 +33,10 @@ class LoginController extends Controller
   
         $generateToken = bin2hex(random_bytes(40));
         $user->update([
-            'token' => $generateToken
+            'api_token' => $generateToken
         ]);
   
-        return response()->json($user);
+        return response()->json(['message' => 'User login successfully', 'data' => $user]);
         
     }
 
