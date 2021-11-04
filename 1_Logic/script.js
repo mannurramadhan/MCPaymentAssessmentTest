@@ -7,7 +7,7 @@ function numsIndex(action) {
     switch (action) {
         case 'add':
             for (let i = 0; i < (length + 1); i++) {
-                indexElement += "<input type='number' class='input-index' placeholder='Value-" + (i + 1) + "' id='numsIndex" + (i + 1) + "' />"   
+                indexElement += "<input type='number' class='input-index' placeholder='Value-" + (i + 1) + "' id='numsIndex" + (i + 1) + "' />"
             }
             break;
         case 'reduce':
@@ -50,6 +50,9 @@ function generate() {
                 resultVal.value = "[ " + result.join(", ") + " ]";
 
                 return result;
+            } else {
+                // Set null value for invalid condition
+                arrayVal.value = targetVal.value = resultVal.value = 'null';
             }
         }
     }
