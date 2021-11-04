@@ -15,6 +15,7 @@ class CreateBudgetAppTablesTransactions extends Migration
     {
         Schema::create('budget_app_tables_transactions', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('transaction_name');
             $table->integer('transaction_category')->unsigned()->nullable();
             $table->integer('income')->nullable();
@@ -22,6 +23,7 @@ class CreateBudgetAppTablesTransactions extends Migration
             $table->integer('balance');
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('budget_app_tables_users');
             $table->foreign('transaction_category')->references('id')->on('budget_app_tables_transaction_categories');
         });
     }

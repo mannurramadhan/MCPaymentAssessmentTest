@@ -17,6 +17,7 @@ class CreateBudgetAppTablesTransactionCategories extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('icon_url')->nullable();
+            $table->timestamps();
         });
     }
 
