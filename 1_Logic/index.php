@@ -22,25 +22,25 @@
     <div class="section">
         <h3>INPUT SECTION</h3>
         <hr>
-        <form action="" method="POST">
+        <form>
             <div class="form-body">
                 <div class="col-index">
                     <label for="#indexNumber">Insert Number for Array Index:</label>
                     <div id="indexNumber">
-                        <input type="number" class="input-index" placeholder="Value-1" name="numsIndex1" />
+                        <input type="number" class="input-index" placeholder="Value-1" id="numsIndex1" />
                     </div>
                 </div>
                 <div class="col-target">
                     <label for="#targetNumber">Insert Target Value:</label>
                     <div id="targetNumber">
-                        <input type="number" class="input-target" placeholder="Target" name="targetValue" />
+                        <input type="number" class="input-target" placeholder="Target" id="numsTarget" />
                     </div>
                 </div>
             </div>
             <div class="form-footer">
                 <button class="btn-add" type="button" onclick="numsIndex('add')">Add</button>
                 <button class="btn-reduce" type="button" onclick="numsIndex('reduce')">Reduce</button>
-                <button class="btn-submit" type="submit">Generate</button>
+                <button class="btn-submit" type="button" onclick="generate()">Generate</button>
             </div>
         </form>
     </div>
@@ -50,15 +50,15 @@
         <div class="result">
             <div class="col-result">
                 <label for="">Array Index:</label>
-                <input type="text" class="array-value">
+                <input type="text" class="array-value" id="arrayValue">
             </div>
             <div class="col-result">
                 <label for="">Target Value:</label>
-                <input type="text" class="target-value">
+                <input type="text" class="target-value" id="targetValue">
             </div>
             <div class="col-result">
                 <label>Result Value:</label>
-                <input type="text" class="result-value">
+                <input type="text" class="result-value" id="resultValue">
             </div>
         </div>
     </div>
