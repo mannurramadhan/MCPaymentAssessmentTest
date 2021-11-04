@@ -41,7 +41,7 @@ function generate() {
         for (let y = 0; y < nums.length; y++) {
             if (x != y) {
                 let twoSums = parseInt(nums[x]) + parseInt(nums[y]);
-                console.log(twoSums);
+
                 if (twoSums == numsTarget) {
                     const result = new Array(x,y);
     
