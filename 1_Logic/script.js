@@ -39,20 +39,22 @@ function generate() {
 
     for (let x = 0; x < nums.length; x++) {
         for (let y = 0; y < nums.length; y++) {
-            let twoSums = parseInt(nums[x]) + parseInt(nums[y]);
-
-            if (twoSums == numsTarget) {
-                const result = new Array(x,y);
-
-                // Set value for result section
-                arrayVal.value = "[ " + nums.join(", ") + " ]";
-                targetVal.value = numsTarget;
-                resultVal.value = "[ " + result.join(", ") + " ]";
-
-                return result;
-            } else {
-                // Set null value for invalid condition
-                arrayVal.value = targetVal.value = resultVal.value = 'null';
+            if (x != y) {
+                let twoSums = parseInt(nums[x]) + parseInt(nums[y]);
+                console.log(twoSums);
+                if (twoSums == numsTarget) {
+                    const result = new Array(x,y);
+    
+                    // Set value for result section
+                    arrayVal.value = "[ " + nums.join(", ") + " ]";
+                    targetVal.value = numsTarget;
+                    resultVal.value = "[ " + result.join(", ") + " ]";
+    
+                    return result;
+                } else {
+                    // Set null value for invalid condition
+                    arrayVal.value = targetVal.value = resultVal.value = 'null';
+                }
             }
         }
     }
