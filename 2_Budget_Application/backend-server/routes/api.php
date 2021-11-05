@@ -27,5 +27,6 @@ $router->group($attr, function(Router $api){
 
     $api->group(['prefix' => 'authentication'], fn(Router $authentication)=>require base_path('routes/api/authentication.php'));
     $api->group(['prefix' => 'transaction'], fn(Router $transaction)=>require base_path('routes/api/transaction.php'));
+    $api->group(['prefix' => 'account'], fn(Router $account)=>require base_path('routes/api/account.php'));
 
 });
