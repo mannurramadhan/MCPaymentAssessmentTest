@@ -11,3 +11,7 @@ $transaction->post('/', "TransactionController@store");
 $transaction->get('/', "TransactionController@fetch");
 $transaction->get('/{id}', "TransactionController@show");
 $transaction->put('/{id}', "TransactionController@update");
+
+$transaction->group(['prefix' => 'category'], function(Router $category){
+    $category->get('/', "TransactionCategoryController@fetch");
+});
