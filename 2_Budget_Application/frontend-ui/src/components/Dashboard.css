@@ -1,0 +1,14 @@
+/* Div Section */
+div.dashboard-container {
+    background-color: #e4e4e4;
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    width: 100%;
+}
+
+div.dashboard-container h3 {
+    color: #191a1d;
+    text-align: center;
+    margin: 10px 0;
+}
