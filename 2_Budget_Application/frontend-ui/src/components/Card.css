@@ -1,0 +1,19 @@
+/* Div Section */
+div.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 5px 10px;
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    width: 28%;
+    height: 100px;
+    margin: 10px 10px;
+}
+
+span.bl-nominal {
+    font-weight: 500;
+    font-size: 35px;
+    text-align: right;
+    margin: auto 0;
+}

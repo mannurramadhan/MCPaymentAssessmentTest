@@ -1,0 +1,14 @@
+/* Div Section */
+div.summary-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: fit-content;
+}
+
+div.summary-container h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+    margin: 0;
+}
