@@ -1,10 +1,29 @@
+import { useEffect, useState } from "react";
 import "./Table.css";
+import Tr from "./TrTd";
 
 function Table() {
+    const [trans, setTrans] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/api/transaction")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                setTrans(data);
+            })
+            .catch((err) => {
+                if (err.name === "AbortError") {
+                    console.log("fetch aborted.");
+                }
+            });
+    }, []);
+
     return (
         <div className="table-container">
             <h3>List Transaction</h3>
-            <hr/>
+            <hr />
             <table className="data-table">
                 <thead>
                     <tr>
@@ -16,27 +35,9 @@ function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Buying a lunch</td>
-                        <td>Food</td>
-                        <td>0</td>
-                        <td>56.000</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Washing car</td>
-                        <td>Car</td>
-                        <td>0</td>
-                        <td>100.000</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Monthly Salary</td>
-                        <td>Salary</td>
-                        <td>7.000.000</td>
-                        <td>0</td>
-                    </tr>
+                    {trans.map((tr) => (
+                        <Tr tr={tr} key={tr.id} />
+                    ))}
                 </tbody>
             </table>
         </div>
