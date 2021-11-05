@@ -1,14 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
 import Navbar from './components/Navbar';
+import Table from './components/Table';
 
 function App() {
   return (
     <div className="App">
-      <div className="header-section">
-        <Navbar nameApps="Budget Apps"/>
+      <Navbar nameApps="Budget Apps" />
+      <div className="content-container">
+        <Table />
+        <Form />
       </div>
-      <div className="content-section"></div>
     </div>
   );
 }
