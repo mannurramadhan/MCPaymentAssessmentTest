@@ -9,23 +9,28 @@ use Illuminate\Http\Request;
 class TransactionController extends Controller
 {
 
-    // public function __construct()
-    // {
-
-    //     $this->middleware('auth');
-
-    // }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function fetch()
     {
 
-        $transaction = Transaction::all();
+        $transaction = Transaction::leftJoin(
+            'budget_app_tables_transaction_categories', 
+            'budget_app_tables_transactions.transaction_category_id', 
+            '=', 'budget_app_tables_transaction_categories.id'
+        );
+        $transaction = $transaction->select(
+            'budget_app_tables_transactions.*', 
+            'budget_app_tables_transaction_categories.name AS transaction_category'
+        );
+        $transaction = $transaction->orderBy('budget_app_tables_transactions.id', 'asc');
+        $transaction = $transaction->get();
+
         return response()->json($transaction);
+
     }
 
     /**
@@ -108,7 +113,7 @@ class TransactionController extends Controller
         $transaction = Transaction::create([
             'user_id' => $user_id,
             'transaction_name' => $transaction_name,
-            'transaction_category' => $transaction_category,
+            'transaction_category_id' => $transaction_category,
             'income' => $income,
             'expense' => $expense,
             'balance' => $balance
@@ -116,6 +121,7 @@ class TransactionController extends Controller
 
         if ($transaction) return response()->json(['message' => 'Transaction create successfully.', 'data' => $transaction]);
         else return response()->json(['message' => 'Transaction create failed'], 500);
+
     }
 
     /**
@@ -132,6 +138,7 @@ class TransactionController extends Controller
             return response()->json(['message' => 'Data not found'], 404);
         }
         return response()->json($transaction);
+
     }
 
     /**
@@ -225,7 +232,7 @@ class TransactionController extends Controller
         // Update transaction balance data
         $transaction = $transaction->update([
             'transaction_name' => $transaction_name,
-            'transaction_category' => $transaction_category,
+            'transaction_category_id' => $transaction_category,
             'income' => $income,
             'expense' => $expense,
             'balance' => $balance
@@ -263,6 +270,7 @@ class TransactionController extends Controller
         }
 
         return response()->json(['message' => 'Transaction updated successfully.', 'data' => $transaction]);
+    
     }
 
 }

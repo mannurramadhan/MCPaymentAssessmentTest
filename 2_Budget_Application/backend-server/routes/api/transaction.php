@@ -8,6 +8,6 @@
 use Laravel\Lumen\Routing\Router;
 
 $transaction->post('/', "TransactionController@store");
-$transaction->get('/', "TransactionController@index");
+$transaction->get('/', "TransactionController@fetch");
 $transaction->get('/{id}', "TransactionController@show");
 $transaction->put('/{id}', "TransactionController@update");
