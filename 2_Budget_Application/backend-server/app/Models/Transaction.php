@@ -25,7 +25,7 @@ class Transaction extends Model
         "id",
         'user_id',
         "transaction_name",
-        "transaction_category",
+        "transaction_category_id",
         "income",
         "expense",
         "balance"

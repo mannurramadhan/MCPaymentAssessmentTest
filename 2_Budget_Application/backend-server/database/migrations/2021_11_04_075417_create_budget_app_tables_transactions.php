@@ -17,7 +17,7 @@ class CreateBudgetAppTablesTransactions extends Migration
             $table->id();
             $table->integer('user_id')->unsigned()->nullable();
             $table->string('transaction_name');
-            $table->integer('transaction_category')->unsigned()->nullable();
+            $table->integer('transaction_category_id')->unsigned()->nullable();
             $table->integer('income')->nullable();
             $table->integer('expense')->nullable();
             $table->integer('balance');
