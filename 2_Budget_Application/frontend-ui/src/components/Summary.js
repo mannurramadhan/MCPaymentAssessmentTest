@@ -1,12 +1,30 @@
-import Card from './Card';
-import './Summary.css';
+import { useEffect, useState } from "react";
+import Card from "./Card";
+import "./Summary.css";
 
 function Summary() {
+    const [summary, setSummary] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/api/account")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                setSummary(data);
+            })
+            .catch((err) => {
+                if (err.name === "AbortError") {
+                    console.log("fetch aborted.");
+                }
+            });
+    }, []);
+
     return (
         <div className="summary-container">
-            <Card title="Balance" nominal="1.000.000" />
-            <Card title="Income" nominal="1.000.000" />
-            <Card title="Expense" nominal="1.000.000" />
+            <Card title="Balance" nominal={summary.balance} />
+            <Card title="Income" nominal={summary.income} />
+            <Card title="Expense" nominal={summary.expense} />
         </div>
     );
 }

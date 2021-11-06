@@ -4,7 +4,7 @@ function Card(props) {
     return (
         <div className="card-container">
             <h1>{props.title}</h1>
-            <span className="bl-nominal">Rp. {props.nominal}</span>
+            <span className="bl-nominal">{props.nominal}</span>
         </div>
     );
 }

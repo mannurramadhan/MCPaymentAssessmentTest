@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar nameApps="Budget Apps" />
       <div className="content-container">
-        <Dashboard title="Financial Summary" />
+        <Dashboard title="Account Summary" />
       </div>
       <div className="content-container">
         <Table />
