@@ -26,9 +26,9 @@ class AccountController extends Controller
         }
 
         $summary = [
-            'balance' => $balance,
-            'income' => $income,
-            'expense' => $expense
+            'balance' => "Rp. " . number_format($balance, 0, ".", ".") . ",-",
+            'income' => "Rp. " . number_format($income, 0, ".", ".") . ",-",
+            'expense' => "Rp. " . number_format($expense, 0, ".", ".") . ",-"
         ];
 
         return response()->json($summary);
