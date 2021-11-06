@@ -12,3 +12,11 @@ div.dashboard-container h3 {
     text-align: center;
     margin: 10px 0;
 }
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 790px) {
+    div.dashboard-container {
+        width: auto;
+        transition: all 1s;
+    }
+}

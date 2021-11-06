@@ -1,3 +1,4 @@
+/* Div Section */
 div.form-container {
     background-color: #e4e4e4;
     padding: 20px;
@@ -12,6 +13,7 @@ div.form-container h3 {
     margin: 10px 0;
 }
 
+/* Input Section */
 input,
 select {
     width: 100%;
@@ -23,6 +25,7 @@ select {
     box-sizing: border-box;
 }
 
+/* Button Section */
 button {
     font-size: 1rem;
     font-weight: 400;
@@ -47,6 +50,7 @@ button {
     background-color: rgb(27, 104, 129);
 }
 
+/* Responsive Breakpoint */
 @media screen and (max-width: 1020px) {
     div.form-container {
         width: 35%;
@@ -56,7 +60,7 @@ button {
 
 @media screen and (max-width: 790px) {
     div.form-container {
-        width: 95%;
+        width: auto;
         transition: all 1s;
     }
 }

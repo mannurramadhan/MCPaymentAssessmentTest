@@ -11,9 +11,18 @@ div.card-container {
     margin: 10px 10px;
 }
 
+/* Span Section */
 span.bl-nominal {
     font-weight: 500;
     font-size: 35px;
     text-align: right;
     margin: auto 0;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 1020px) {
+    div.card-container {
+        width: auto;
+        transition: all 1s;
+    }
 }

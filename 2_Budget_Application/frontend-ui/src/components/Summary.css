@@ -12,3 +12,11 @@ div.summary-container h1 {
     font-size: 30px;
     margin: 0;
 }
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 1020px) {
+    div.summary-container {
+        flex-direction: column;
+        transition: all 1s;
+    }
+}

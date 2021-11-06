@@ -50,6 +50,7 @@ table.data-table tr:hover {
     background-color: #ddd;
 }
 
+/* Responsive Breakpoint */
 @media screen and (max-width: 1020px) {
     div.table-container {
         width: 50%;
@@ -59,8 +60,8 @@ table.data-table tr:hover {
 
 @media screen and (max-width: 790px) {
     div.table-container {
-        width: 95%;
-        margin-bottom: 30px; 
+        width: auto;
+        margin-bottom: 45px; 
         transition: all 1s;
     }
 }

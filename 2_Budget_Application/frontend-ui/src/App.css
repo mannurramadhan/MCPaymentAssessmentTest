@@ -1,17 +1,27 @@
-.content-container {
+/* Div Section */
+div.content-container {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
-    margin: 70px 20px 0px 20px;
+    margin: 5px 20px 0px 20px;
     padding: 20px;
     border: 1px solid #ffffff;
     border-radius: 5px;
 }
 
+div.content-container.header {
+    margin-top: 70px;
+} 
+
+/* Responsive Breakpoint */
 @media screen and (max-width: 790px) {
-  .content-container {
+  div.content-container {
       flex-direction: column;
-      margin-top: 60px;
+      margin-top: 0;
       transition: all 1s;
   }
+
+  div.content-container.header {
+    margin-top: 60px;
+} 
 }

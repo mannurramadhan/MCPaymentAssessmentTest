@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar nameApps="Budget Apps" />
-      <div className="content-container">
+      <div className="content-container header">
         <Dashboard title="Account Summary" />
       </div>
       <div className="content-container">
