@@ -27,7 +27,14 @@ class TransactionController extends Controller
             'budget_app_tables_transaction_categories.name AS transaction_category'
         );
         $transaction = $transaction->orderBy('budget_app_tables_transactions.id', 'asc');
-        $transaction = $transaction->get();
+        $transaction = $transaction->get()->toArray();
+
+        // Formatting currency
+        for ($i=0; $i < count($transaction); $i++) { 
+            $transaction[$i]['income'] = "Rp. " . number_format($transaction[$i]['income'], 0, ".", ".") . ",-";
+            $transaction[$i]['expense'] = "Rp. " . number_format($transaction[$i]['expense'], 0, ".", ".") . ",-";
+            $transaction[$i]['balance'] = "Rp. " . number_format($transaction[$i]['balance'], 0, ".", ".") . ",-";
+        }
 
         return response()->json($transaction);
 
